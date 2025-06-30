@@ -16,5 +16,5 @@ The programming language used for this project was C++.
 
 # Useful Websites
 
-- [cpp reference] (https://en.cppreference.com/w/)
-- [Learn C++] (https://www.learncpp.com/)
+* [cppreference](https://en.cppreference.com/w/)
+* [Learn C++](https://www.learncpp.com/)
