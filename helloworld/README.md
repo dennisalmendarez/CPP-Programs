@@ -6,7 +6,7 @@ The software is a console application that, when run, displays the classic messa
 
 The purpose of this software is to verify my C++ development and execution environment and to demonstrate a core understanding of how to produce output in a program. This is a traditional first step in learning any new programming language.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[HelloWorld Demo Video](https://youtu.be/fhyLs2aQa_s)
 
 # Development Environment
 
@@ -16,6 +16,5 @@ The programming language used for this project was C++.
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
 * [cppreference] (https://en.cppreference.com/w/)
 * [Learn C++](https://www.learncpp.com/)
