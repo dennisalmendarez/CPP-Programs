@@ -1,0 +1,74 @@
+1.	Module Plan Report - Monday, July 7, 2025
+•	Module # (1-3): 1 
+•	First Week of Sprint - Monday 
+•	Task: Environment Setup & Basic C++ Test 
+Brief Description of Work:
+•	Installed and verified FFmpeg, ensuring its executable path was correctly added to the system's PATH environment variables.
+•	Set up Visual Studio Code for C++ development, including installing the necessary C/C++ extension and configuring the compiler (MinGW-w64).
+•	Wrote, compiled, and successfully ran a simple "Hello, C++!" program to confirm that the development environment was correctly configured and operational.
+•	Time Spent: 3 hours 
+2.	Module Plan Report - Tuesday, July 8, 2025
+•	Module # (1-3): 1 
+•	First Week of Sprint - Tuesday 
+•	Task: Helper Functions & ClipInfo Struct 
+Brief Description of Work:
+•	Created main.cpp file and outlined the VideoClipper class structure.
+•	Implemented the timeToSeconds() helper function for converting HH:MM:SS format to total seconds, and tested its functionality.
+•	Implemented the sanitizeFilename() helper function to clean strings for valid file names, and tested it with various inputs.
+•	Defined the VideoClipper::ClipInfo struct to organize clip details (start time, end time, base name).
+•	Conducted initial testing of both helper functions and the ClipInfo struct to ensure correct behavior.
+•	Time Spent: 3 hours 
+3.	Module Plan Report - Wednesday, July 9, 2025
+•	Module # (1-3): 1 
+•	First Week of Sprint - Wednesday 
+•	Task: Core Clipping Logic (Part 1) 
+Brief Description of Work:
+•	Implemented the VideoClipper class constructor to properly handle the input video path and the base output directory.
+•	Implemented the logic for creating the specific output subfolder (e.g., _clips folder) using std::filesystem::create_directories(), and tested that directories are created correctly.
+•	Began constructing the FFmpeg command string within the extractClips() method, setting up the basic parameters for clipping.
+•	Time Spent: 5 hours 
+4.	Module Plan Report - Thursday, July 10, 2025
+•	Module # (1-3): 1
+•	First Week of Sprint - Thursday
+•	Task: Core Clipping Logic (Part 2) & Initial FFmpeg Test 
+Brief Description of Work:
+•	Implemented the loop in VideoClipper::extractClips() to iterate over ClipInfo.
+•	Constructed the full FFmpeg command string for each clip within the loop.
+•	Implemented the system() call to execute FFmpeg.
+•	Tested with the actual input video path and a couple of test clips. Debugged FFmpeg errors by running commands manually first.
+•	Time Spent: 3 hours
+5.	Module Plan Report - Friday, July 11, 2025
+•	Module # (1-3): 1
+•	First Week of Sprint - Friday
+•	Task: Debugging & Robustness / Contingency 
+Brief Description of Work:
+•	Spent time debugging any remaining issues with clipping logic or FFmpeg execution.
+•	Added more robust error messages to the C++ program if FFmpeg fails, hinting at the problem.
+•	Time Spent: 2 hours
+6.	Module Plan Report - Monday, July 14, 2025
+•	Module # (1-3): 1
+•	Second Week of Sprint - Monday
+•	Task: Code Refinement & Dynamic Memory (New/Delete) 
+Brief Description of Work:
+•	Reviewed the entire VideoClipper class and main.cpp for clarity and best practices.
+•	Implemented the 
+new and delete operators in main.cpp to dynamically create and destroy the VideoClipper object.
+•	Thoroughly tested this dynamic allocation to ensure there were no memory leaks and that the program flow was correct.
+•	Time Spent: 3 hours
+7.	Module Plan Report - Tuesday, July 15, 2025
+•	Module # (1-3): 1
+•	Second Week of Sprint - Tuesday
+•	Task: README.md Creation & Code Comments 
+Brief Description of Work:
+•	Created the README.md file using the C++ module template. Filled out all sections, describing the project, how it meets requirements, and how to run it.
+•	Added extensive comments to C++ code: explain classes, functions, complex logic, and important variables. Focused on clarity for someone new to C++.
+•	Time Spent: 3 hours
+8.	Module Plan Report - Wednesday, July 16, 2025
+•	Module # (1-3): 1
+•	Second Week of Sprint - Wednesday
+•	Task: Video Recording & Final Checks 
+Brief Description of Work:
+•	Recorded a 4-5 minute demonstration video. Showing the application running (from the command line), demonstrating its functionality, and walking through the C++ code.
+•	Ensured the "talking head" image is visible in the video, as required.
+•	Time Spent: 3 hours
+Total Module Work Time So Far: 23 hours 
