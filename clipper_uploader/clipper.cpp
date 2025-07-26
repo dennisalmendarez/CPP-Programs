@@ -242,7 +242,7 @@ class VideoClipper {
 
 int main() {
     std::cout << "🔐 Launching login system...\n";
-    int auth_result = system("python user_auth.py");
+    int auth_result = system("python user_auth\\user_auth.py");
     if (auth_result != 0) {
         std::cout << "👋 Exiting app.\n";
         return 0;
