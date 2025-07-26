@@ -1,0 +1,110 @@
+CSE 310 – Applied Programming
+Module Plan Report
+Name: Dennis Almendarez
+Module #: 2 – Cloud Databases
+Sprint Start: Monday, July 14, 2025
+Sprint End: Saturday, July 26, 2025
+Total Time Spent: 32 hours
+
+Week 1
+1 Monday, July 14, 2025
+Task: Set up MongoDB Atlas Cluster & Environment Test
+Brief Description of Work:
+Created MongoDB Atlas account and provisioned a new cluster.
+
+Configured user, password, and IP access list.
+Connected to MongoDB using pymongo and ran a successful test insert/find from a local script.
+Time Spent: 1 hours
+
+2 Tuesday, July 15, 2025
+Task: Develop user_auth.py for Registration/Login
+Brief Description of Work:
+Built user_auth.py to handle registration and login via the terminal.
+Used pymongo to connect to Atlas and interact with the Users.Accounts collection.
+Created hash_password() function using SHA-256 for secure storage.
+Time Spent: 2 hours
+
+3 Wednesday, July 16, 2025
+Task 1: Add update user name, password and deleted option.
+Task 2: Add Secure Password Handling & Validation
+Brief Description of Work:
+Added code to modified cloud database content.
+Integrated getpass for hidden password input during login.
+Enhanced logic to prevent duplicate usernames and handle edge cases.
+Cleaned and validated inputs, tested with dummy data.
+Time Spent: 4 hours
+
+4 Thursday, July 17, 2025
+Task: Integrate Python Auth into C++ App
+Brief Description of Work:
+Added authentication system to the start of main() in the C++ app using a system() call:
+
+cpp
+Copy
+Edit
+std::cout << "🔐 Launching login system...\n";  
+int auth_result = system("python user_auth.py");  
+if (auth_result != 0) {  
+    std::cout << "👋 Exiting app.\n";  
+    return 0;  
+}  
+std::cout << "✅ Authenticated!\n";
+Verified full interaction: registration, login, incorrect credentials, and exit path.
+
+Ensured .env was loaded and MONGO_URI used securely.
+Time Spent: 8 hours
+
+5 Friday, July 18, 2025
+Task: Test Authentication with Edge Cases
+Brief Description of Work:
+Simulated failed logins, duplicate usernames, and invalid passwords.
+Handled MongoDB disconnection scenarios gracefully.
+Confirmed that invalid login or user exit terminates the C++ app as expected.
+Time Spent: 2 hours
+
+Week 2
+6 Monday, July 21, 2025
+Task: Refactor Python Auth Code
+Brief Description of Work:
+Refactored user_auth.py into structured methods.
+Added meaningful prompts, color-coded output, and clean exit codes.
+Ensured environment variables are abstracted using .env securely.
+Time Spent: 3 hours
+
+7 Tuesday, July 22, 2025
+Task: Build Login-to-Workflow Bridge
+Brief Description of Work:
+Ensured that authenticated users automatically proceed to cut video in the C++ app.
+Time Spent: 2 hours
+
+8 Wednesday, July 23, 2025
+Task: Error Handling and Retry Logic
+Brief Description of Work:
+Implemented retry prompts in the Python script if login fails.
+Provided clear failure reasons for all cases (user not found, wrong password, MongoDB error).
+Output messages aligned with the app’s tone (emoji-based feedback).
+Time Spent: 2 hours
+
+9 Thursday, July 24, 2025
+Task: Integration Test: C++ + Python + MongoDB
+Brief Description of Work:
+Conducted complete workflow test from terminal launch → login → metadata input.
+Verified successful login transitions to main application flow.
+Validated edge cases and updated README to reflect behavior.
+Time Spent: 4 hours
+
+10 Friday, July 25, 2025
+Task: Finalize Code and Create Documentation
+Brief Description of Work:
+Updated README.md with setup instructions, environment requirements, and usage steps.
+Organized files and pushed project to GitHub.
+Highlighted which parts are Python, C++, and where MongoDB is used.
+Time Spent: 2 hours
+
+11 Saturday, July 26, 2025
+Task: Record Demonstration Video
+Brief Description of Work:
+Recorded a 5-minute demo showing terminal-based login, MongoDB interaction, and C++ flow.
+Walked through the code, explained logic, and included a talking head as required.
+Uploaded video and reviewed all materials for submission.
+Time Spent: 2 hours

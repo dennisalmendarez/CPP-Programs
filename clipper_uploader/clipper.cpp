@@ -241,6 +241,14 @@ class VideoClipper {
 // --- Main Application Entry Point ---
 
 int main() {
+    std::cout << "🔐 Launching login system...\n";
+    int auth_result = system("python user_auth.py");
+    if (auth_result != 0) {
+        std::cout << "👋 Exiting app.\n";
+        return 0;
+    }
+    std::cout << "✅ Authenticated!\n";
+    
     // Monday's work: Initial main function structure and includes
     std::cout << "--- CSE 310: C++ Video Clipper (Module 1 - Console App) ---" << std::endl;
     std::cout << "This application demonstrates C++ fundamentals by clipping videos." << std::endl;
