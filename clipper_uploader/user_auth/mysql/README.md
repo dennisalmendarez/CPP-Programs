@@ -1,54 +1,59 @@
-# C++ Video Clipper User Authentication and Registering (Module 3: SQL Relational Database)
+# Overview
 
-## Overview
+This project enhances a C++ desktop video clipping application by integrating a secure user authentication system connected to a MySQL relational database. The purpose of this software is to build skills in database-driven application development, cross-language integration, and secure credential handling.
 
-This module builds upon the foundational video clipper tool developed in Module 1. It introduces user authentication and registration using a MySQL relational database and Python. The goal of this module is to demonstrate how C++ applications can be integrated with a relational database backend through system-level calls and Python scripts.
+The program launches with a Python-based login system that interacts with a MySQL backend, requiring users to register or log in before accessing the video clipping tools. All credentials are hashed using SHA-256 for security, and database connection settings are stored in a `.env` file to prevent exposure in public repositories.
 
-The enhanced application requires users to log in or register before they can access the core video clipping functionality. Authentication is performed through a terminal-based Python interface that securely handles user credentials and stores them in MySQL.
+The software demonstrates the ability to:
+- Connect to a relational database.
+- Perform CRUD operations (create, read, update, delete).
+- Filter data based on a date range.
+- Integrate Python scripts into a C++ workflow.
 
----
+Once authenticated, users can process video clips through a menu-driven interface that uses FFmpeg for media handling.
 
-## Unique Module Requirements Met
+[Register and Log in function](https://youtu.be/DyD1pGXMxMU)
 
-This software demonstrates the following requirements for the SQL Relational Database module:
+# Relational Database
 
-- **Connection to a SQL Database:** Uses MySQL to store user credentials and account creation dates.
-- **Authentication:** Implements a login/registration system that interacts with the MySQL database.
-- **Python Integration:** Uses a Python script (`user_auth.py`) to handle database logic, triggered from C++.
-- **Secure Credential Handling:** Passwords are hashed using SHA-256 before being stored, and database credentials are kept in a `.env` file (ignored by GitHub).
-- **Software Integration:** The C++ application only proceeds if the user successfully logs in or registers.
-- **Create a relational database with at least one table:** A MySQL database (`user`) is created locally, with a table `accounts` containing username, hashed password, and `created_at` fields.
-- **Insert data into the database:** When a new user registers, their username, hashed password, and account creation date are stored in the database via the Python authentication script.
-- **Modify data in the database:** Users can update their username or password securely through menu options.
-- **Delete data in the database:** User accounts can be deleted from the database, removing their credentials.
-- **Retrieve/query data from the database:** During login, the Python script queries the database to verify the entered username and hashed password. The account creation date is also displayed.
-- **Query data by date/time:** A menu option allows filtering accounts created within a specific date range.
-- **Software is written and executable:** The C++ and Python code is fully implemented, tested, and can be executed as described in the instructions.
-- **SQL DB used meaningfully in workflow:** The database is essential for authentication; users must log in or register before accessing the main application features.
-- **Uses appropriate tools/libraries:** The solution uses MySQL, `mysql-connector-python` for database operations, and `python-dotenv` for secure environment variable management.
-- **Implement user authentication:** The application enforces authentication by requiring users to log in or register, with credentials securely handled and verified against the MySQL database.
+The application uses a **MySQL** database running locally.
+Database: `user`
+Table: `accounts`
 
-[Clipper Register and Log in function](https://youtu.be/DyD1pGXMxMU) <!-- Replace with your actual video link -->
+The `accounts` table contains the following columns:
+- **id** (INT, Primary Key, Auto Increment) – Unique identifier for each account.
+- **username** (VARCHAR) – Unique username chosen by the user.
+- **password** (VARCHAR) – SHA-256 hashed password.
+- **created_at** (DATETIME) – Automatically set when the account is created.
 
----
+This structure allows secure storage of user data and supports queries to filter accounts by creation date.
 
-## Development Environment
+# Development Environment
 
-- **Visual Studio Code** was used for C++ development.
-- **Python 3** was used to implement the login system (`user_auth.py`).
-- **MySQL Server** was installed locally and accessed using `mysql-connector-python` and `dotenv`.
+- **C++** – Core application for video clipping, built in Visual Studio Code.
+- **Python 3** – Authentication and MySQL interaction (`user_auth.py`).
+- **MySQL Server** – Local instance for relational data storage.
+- **Libraries Used**:
+  - `mysql-connector-python` – For Python to MySQL communication.
+  - `python-dotenv` – For secure environment variable management.
+  - `hashlib` – For password hashing.
+- **External Tools**:
+  - `.env` file – Stores MySQL credentials securely (ignored by GitHub).
 
-The `main()` function in the C++ application includes the following authentication call:
+# Useful Websites
 
-```cpp
-std::cout << "🔐 Launching login system...\n";
-int auth_result = system("python user_auth.py");
-if (auth_result != 0) {
-    std::cout << "👋 Exiting app.\n";
-    return 0;
-}
-std::cout << "✅ Authenticated!\n";
-```
+- [MySQL Official Site](https://dev.mysql.com/)
+- [mysql-connector-python Documentation](https://dev.mysql.com/doc/connector-python/en/)
+- [Python Dotenv PyPI](https://pypi.org/project/python-dotenv/)
+- [SHA-256 Hashing Explanation](https://en.wikipedia.org/wiki/SHA-2)
+
+# Future Work
+
+- Add password reset functionality with email verification.
+- Implement pagination and search for account listing.
+- Integrate cloud-hosted MySQL to allow remote authentication.
+- Improve the C++ interface for a more user-friendly GUI.
+- Add more video processing features beyond clipping.
 
 ## Prerequisites
 
@@ -64,7 +69,7 @@ Before running this module, ensure you have the following configured:
 
   ```env
   MYSQL_HOST=localhost
-  MYSQL_PORT=3306
+  MYSQL_PORT=hostnumber
   MYSQL_USER=root
   MYSQL_PASSWORD=your_mysql_password
   MYSQL=user
@@ -99,10 +104,3 @@ CREATE TABLE accounts (
 - **Show accounts created within a date range**
 
 6. If successful, the program continues to the video clipping interface.
-
-## Useful Websites
-
-- [MySQL](https://dev.mysql.com/) - SQL database platform.
-- [mysql-connector-python Docs](https://dev.mysql.com/doc/connector-python/en/) - Python MySQL client documentation.
-- [dotenv PyPI](https://pypi.org/project/python-dotenv/) - For managing environment variables securely.
-- [SHA-256 Explanation](https://en.wikipedia.org/wiki/SHA-2) - Overview of password hashing method.
