@@ -1,1 +1,6 @@
 .env
+BackUp Folder
+__pycache__/
+*.pyc
+youtube_uploader
+youtube_uploader

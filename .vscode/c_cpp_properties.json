@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/clipper_uploader/json-develop/include/nlohmann"
+                "C:/msys64/mingw64/include/QtWidgets"
             ],
             "defines": [
                 "_DEBUG",
