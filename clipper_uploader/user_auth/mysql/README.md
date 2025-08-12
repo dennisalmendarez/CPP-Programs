@@ -67,7 +67,7 @@ Before running this module, ensure you have the following configured:
   MYSQL_PORT=3306
   MYSQL_USER=root
   MYSQL_PASSWORD=your_mysql_password
-  MYSQL_DB=user
+  MYSQL=user
   ```
 
 - MySQL database and table created:
