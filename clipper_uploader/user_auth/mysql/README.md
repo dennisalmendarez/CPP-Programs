@@ -28,7 +28,7 @@ This software demonstrates the following requirements for the SQL Relational Dat
 - **Uses appropriate tools/libraries:** The solution uses MySQL, `mysql-connector-python` for database operations, and `python-dotenv` for secure environment variable management.
 - **Implement user authentication:** The application enforces authentication by requiring users to log in or register, with credentials securely handled and verified against the MySQL database.
 
-[Clipper Register and Log in function](#) <!-- Replace with your actual video link -->
+[Clipper Register and Log in function](https://youtu.be/DyD1pGXMxMU) <!-- Replace with your actual video link -->
 
 ---
 
@@ -60,7 +60,8 @@ Before running this module, ensure you have the following configured:
   ```bash
   pip install mysql-connector-python python-dotenv
   ```
-- A `.env` file in the root of your project  your database credentials (this file should be in `.gitignore` so it’s not uploaded to GitHub):
+- A `.env` file in the root of your project your database credentials (this file should be in `.gitignore` so it’s not uploaded to GitHub):
+
   ```env
   MYSQL_HOST=localhost
   MYSQL_PORT=3306
@@ -70,6 +71,7 @@ Before running this module, ensure you have the following configured:
   ```
 
 - MySQL database and table created:
+
 ```sql
 CREATE DATABASE user_db;
 USE user_db;
@@ -89,11 +91,13 @@ CREATE TABLE accounts (
 3. Compile your C++ project as normal (see Module 1 README).
 4. Run the C++ executable. It will automatically launch the Python login system.
 5. Use the terminal interface to:
-  - **Register a new account**
-  - **Log in to an existing account**
-  - **Update usarname/password**
-  - **Delete account**
-  - **Show accounts created within a date range**
+
+- **Register a new account**
+- **Log in to an existing account**
+- **Update usarname/password**
+- **Delete account**
+- **Show accounts created within a date range**
+
 6. If successful, the program continues to the video clipping interface.
 
 ## Useful Websites
