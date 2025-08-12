@@ -73,8 +73,8 @@ Before running this module, ensure you have the following configured:
 - MySQL database and table created:
 
 ```sql
-CREATE DATABASE user_db;
-USE user_db;
+CREATE DATABASE user;
+USE user;
 
 CREATE TABLE accounts (
     id INT AUTO_INCREMENT PRIMARY KEY,
