@@ -17,7 +17,7 @@ Once authenticated, users can process video clips through a menu-driven interfac
 # Relational Database
 
 The application uses a **MySQL** database running locally.
-Database: `user`
+Database: `users`
 Table: `accounts`
 
 The `accounts` table contains the following columns:
@@ -72,14 +72,14 @@ Before running this module, ensure you have the following configured:
   MYSQL_PORT=hostnumber
   MYSQL_USER=root
   MYSQL_PASSWORD=your_mysql_password
-  MYSQL=user
+  MYSQL=users
   ```
 
 - MySQL database and table created:
 
 ```sql
-CREATE DATABASE user;
-USE user;
+CREATE DATABASE users;
+USE users;
 
 CREATE TABLE accounts (
     id INT AUTO_INCREMENT PRIMARY KEY,
